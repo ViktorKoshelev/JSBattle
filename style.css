@@ -1,6 +1,30 @@
-h1{
-	color: red;
-}
 body{
-	background-color: #CCC;
+	padding-top: 60px;
+	padding-left: 40px;
+	background-image: url(gandex.ru-26_9182_hong-kong-city.jpg);
+	background-size: cover; 
+}
+a{
+	display: block;
+	text-align: center;
+}
+form{
+	padding: 10px;
+	padding-bottom: 0px;
+}
+.btn-group li{
+	padding-left: 15px;
+	display: list-item;
+}
+.btn-group li:hover{
+	background-color: #2bf;
+}
+li{
+	padding: 0px;
+}
+div.btn-group{
+	margin-bottom: 10px;
+}
+button{
+	font-weight: bold;
 }

@@ -5,13 +5,65 @@
 	<title>Yandex</title>
 	<link href="style.css" rel="stylesheet">
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=good&onerror=fail&load=Map,Placemark" type="text/javascript"></script>
-	
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+
 </head>
 <body>
-<h1>HeLLo!</h1>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<ul class="nav nav-tabs nav-stacked">
+					<li><a class="well" href="index.html"><img src="glyphicons-21-home.png"> Главная</a></li>
+					<li><a class="well" href="about.html"><img src="glyphicons-44-group.png"> О нас</a></li>
+				</ul>
+			</div>
+			<div class="span10">
+				<div id="myMap" class="pull-left" style="width: 600px; height: 400px; background-color: grey"></div>
+				<div class="well span4">
+					<form>
+						
+							<div class="btn-group">
+							<a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">
+    								Цвет
+    								<span class="caret"></span>
+ 							</a>
+ 							<ul class="dropdown-menu">
+								<li>1</li>
+								<li>2</li>
+							</ul>
+							</div>
 
-<div id="myMap" style="width: 600px; height: 400px; background-color: grey"></div>
-<script type="text/javascript" src="script.js"></script>
+						
+							<div class="btn-group">
+								<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
+    								Метка
+    								<span class="caret"></span>
+ 								</a>
+								<ul class="dropdown-menu">
+									<li>1</li>
+									<li>2</li>
+								</ul>
+							</div>
 
+						<input type="text" placeholder="Широта">
+						<input type="text" placeholder="Долгота">
+						<span class="help-block">При клике на карту координаты будут выставлены автоматически.</span>
+						<input type="text" placeholder="Название метки">
+						<button name="submit" class="btn btn-success" type="submit">Добавить метку</button>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+		document.forms[0].onsubmit = function(e){
+			//проверка
+			e.preventDefault();
+		}
+	</script>
 </body>
 </html>
