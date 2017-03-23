@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Yandex</title>
 	<link href="style.css" rel="stylesheet">
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=good&onerror=fail&load=Map,Placemark" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Map,Placemark" type="text/javascript"></script>
 	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 
@@ -46,12 +46,13 @@
 								</ul>
 							</div>
 
-						<input type="text" placeholder="Широта">
-						<input type="text" placeholder="Долгота">
+						<input type="text" placeholder="Широта" name="lat">
+						<input type="text" placeholder="Долгота" name="long">
 						<span class="help-block">При клике на карту координаты будут выставлены автоматически.</span>
-						<input type="text" placeholder="Название метки">
+						<input type="text" placeholder="Название метки" name="name">
 						<button name="submit" class="btn btn-success" type="submit">Добавить метку</button>
 					</form>
+					
 				</div>
 			</div>
 		</div>	
@@ -59,11 +60,5 @@
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script>
-		document.forms[0].onsubmit = function(e){
-			//проверка
-			e.preventDefault();
-		}
-	</script>
 </body>
 </html>
