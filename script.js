@@ -14,7 +14,9 @@
 
 //проверяем верность формы
   function validate(event){
-      
+      var errors = document.querySelector(".alert.alert-error");
+      if (errors)
+        form.removeChild(errors);
       var target = event.target;
       var flags = {};
       var lat, long, name;
